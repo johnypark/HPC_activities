@@ -1,15 +1,15 @@
 # UFRC_hpc
 
-This document is to help using resources of University Florida hypergator cluster:
+#This document is to help using resources of University Florida hypergator cluster:
 
-____________________________________________________________________________________________
-Using GDAL software:
-1. Loading software
+#____________________________________________________________________________________________
+#Using GDAL software:
+# 1. Loading software
 ```bash
 $module load gcc
 $module load gdal
 ```
-2. See the available library:
+# 2. See the available library:
 ```bash
 $ ls $HPC_LIBGDAL_BIN
 gdaladdo      gdal-config   gdaldem      gdal_grid  gdallocationinfo 
@@ -18,10 +18,23 @@ testepsg
 gdalbuildvrt  gdal_contour  gdalenhance  gdalinfo   gdalmanage       
 gdalserver      gdaltindex   gdal_translate  nearblack  ogrinfo  ogrtindex
 ```
+# 3. clipping raster file:
 
-3. Example of using gdalinfo:
+```bash
+$ls
+20150415_RGBNorm_Subset.tif			  BCI__Crown_Data_subset.prj
+20150415_WaterShedBlueLineSeg_Subset.tif	  BCI__Crown_Data_subset.qpj
+20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  BCI__Crown_Data_subset.shp
+20150415_YCbCr_Subset.tif			  BCI__Crown_Data_subset.shx
+20150415_YCbCr_Subset.tif.aux.xml		  RGBHaralikcTexturesCH2.tif
+BCI__Crown_Data_subset.dbf			  RGBHaralikcTextures.tif
+$gdalwarp -te 626140.100 1012125.000 626140.200 1012125.200 20150415_RGBNorm_Subset.tif clipped_output.tif
 
 ```
+
+# 4. Example of using gdalinfo:
+
+```bash
 $gdalinfo clipped_output.tif 
 Driver: GTiff/GeoTIFF
 Files: clipped_output.tif
@@ -68,7 +81,6 @@ Band 2 Block=1x3 Type=Byte, ColorInterp=Green
 Band 3 Block=1x3 Type=Byte, ColorInterp=Blue
   NoData Value=nan
 ```
-
 
 
 
