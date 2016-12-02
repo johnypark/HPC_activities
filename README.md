@@ -1,9 +1,9 @@
 # UFRC_hpc
 
-#This document is to help using resources of University Florida hypergator cluster:
+This document is to help using resources of University Florida hypergator cluster:
 
-#____________________________________________________________________________________________
-#Using GDAL software:
+____________________________________________________________________________________________
+Using GDAL software:
 # 1. Loading software
 ```bash
 $module load gcc
