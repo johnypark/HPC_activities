@@ -19,7 +19,8 @@ gdalbuildvrt  gdal_contour  gdalenhance  gdalinfo   gdalmanage
 gdalserver      gdaltindex   gdal_translate  nearblack  ogrinfo  ogrtindex
 ```
 More information about the libraries @: http://www.gdal.org/pages.html
-# 3. clipping raster file: http://www.gdal.org/gdalwarp.html
+# 3. clipping raster file: 
+http://www.gdal.org/gdalwarp.html
 
 ```bash
 $ls
