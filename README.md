@@ -18,6 +18,7 @@ testepsg
 gdalbuildvrt  gdal_contour  gdalenhance  gdalinfo   gdalmanage       
 gdalserver      gdaltindex   gdal_translate  nearblack  ogrinfo  ogrtindex
 ```
+More information about the libraries @: http://www.gdal.org/pages.html
 # 3. clipping raster file:
 
 ```bash
@@ -31,6 +32,7 @@ BCI__Crown_Data_subset.dbf			  RGBHaralikcTextures.tif
 $gdalwarp -te 626140.100 1012125.000 626140.200 1012125.200 20150415_RGBNorm_Subset.tif clipped_output.tif
 
 ```
+
 
 # 4. Example of using gdalinfo:
 
@@ -81,6 +83,8 @@ Band 2 Block=1x3 Type=Byte, ColorInterp=Green
 Band 3 Block=1x3 Type=Byte, ColorInterp=Blue
   NoData Value=nan
 ```
+
+
 
 
 
