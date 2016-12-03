@@ -84,7 +84,37 @@ Band 2 Block=1x3 Type=Byte, ColorInterp=Green
 Band 3 Block=1x3 Type=Byte, ColorInterp=Blue
   NoData Value=nan
 ```
+#5. Usage of Grep -E: Getting boundaries of the raster layer
 
+
+
+```bash
+
+$ ls
+20150415_RGBNorm_Subset.tif			  BCI__Crown_Data_subset.qpj
+20150415_WaterShedBlueLineSeg_Subset.tif	  BCI__Crown_Data_subset.shp
+20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  BCI__Crown_Data_subset.shx
+20150415_YCbCr_Subset.tif			  info.txt
+20150415_YCbCr_Subset.tif.aux.xml		  RGBHaralikcTexturesCH2.tif
+BCI__Crown_Data_subset.dbf			  RGBHaralikcTextures.tif
+BCI__Crown_Data_subset.prj
+
+$ gdalinfo 20150415_WaterShedBlueLineSeg_Subset.tif >>info.txt
+
+$ ls
+20150415_RGBNorm_Subset.tif			  BCI__Crown_Data_subset.qpj
+20150415_WaterShedBlueLineSeg_Subset.tif	  BCI__Crown_Data_subset.shp
+20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  BCI__Crown_Data_subset.shx
+20150415_YCbCr_Subset.tif			  info.txt
+20150415_YCbCr_Subset.tif.aux.xml		  RGBHaralikcTexturesCH2.tif
+BCI__Crown_Data_subset.dbf			  RGBHaralikcTextures.tif
+BCI__Crown_Data_subset.prj
+
+$ grep -E -n 'Upper | Lower | Left | Right' info.txt
+35:Upper Left  (  626140.021, 1012294.937) ( 79d51' 7.03"W,  9d 9'21.43"N)
+36:Lower Left  (  626140.021, 1012125.047) ( 79d51' 7.05"W,  9d 9'15.89"N)
+37:Upper Right (  626343.241, 1012294.937) ( 79d51' 0.37"W,  9d 9'21.40"N)
+38:Lower Right (  626343.241, 1012125.047) ( 79d51' 0.39"W,  9d 9'15.87"N)
 
 
 
