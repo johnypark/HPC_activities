@@ -85,7 +85,14 @@ Band 3 Block=1x3 Type=Byte, ColorInterp=Blue
   NoData Value=nan
 ```
 #5. Usage of Grep -E: Getting boundaries of the raster layer
+   
+   -E, --extended-regexp
+          Interpret PATTERN as an extended regular expression (ERE, see below).  (-E is specified by POSIX.)
 
+Matching Control
+   -e PATTERN, --regexp=PATTERN
+          Use PATTERN as the pattern.  This can be used to specify multiple search patterns, or to protect  a  pattern
+          beginning with a hyphen (-).  (-e is specified by POSIX.)
 
 
 ```bash
