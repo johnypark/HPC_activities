@@ -1,4 +1,4 @@
-#Submitting jobs to bash 
+#Submitting jobs on Linux bash system 
 
 1.Example of a code
 ```sh
@@ -17,16 +17,16 @@ date; hostname; pwd
 
 module load python
 python GetZonalStats.py
-~                           
+                         
 ```
-
+2. Submitting a job to the cluster 
 
 ```bash 
 $sbatch Runcode.sh 
    Submitted batch job 3844451
 ```
 
-..And job under running could be checked using 
+3..And job under running could be checked using 
 ```bash
 $squeue -u g2njoy
    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
