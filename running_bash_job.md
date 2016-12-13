@@ -5,7 +5,7 @@
 #!/bin/bash
 #SBATCH --job-name=prime_threaded   #Job name   
 #SBATCH --mail-type=ALL   # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=g2njoy@ufl.edu   # Where to send mail       
+#SBATCH --mail-user=USER_NAME@university.edu   # Where to send mail       
 #SBATCH --cpus-per-task=4   # Number of cores for multi-threaded ojbs
 #SBATCH --mem-per-cpu=2gb   # Per processor memory
 #SBATCH -t 00:05:00   # Walltime
@@ -28,7 +28,22 @@ $sbatch Runcode.sh
 
 3..And job under running could be checked using 
 ```bash
-$squeue -u g2njoy
+$squeue -u $USER_NAME
    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
    3844451 hpg2-comp prime_th   g2njoy PD       0:00      1 (Priority)
+```
+
+4. Email that was received 
+```bash
+Job ID: 3844451
+Cluster: hipergator
+User/Group: USER_NAME/GROUP_NAME
+State: COMPLETED (exit code 0)
+Nodes: 1
+Cores per node: 4
+CPU Utilization: 00:00:29
+CPU Efficiency: 24.17% of 00:02:00 core-walltime
+Memory Utilization 1.31 MB
+Memory Efficiency: 0.02% of 8.00 GB
+
 ```
