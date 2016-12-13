@@ -26,7 +26,7 @@ $sbatch Runcode.sh
    Submitted batch job 3844451
 ```
 
-3..And job under running could be checked using 
+3. Checking the submitted job 
 ```bash
 $squeue -u $USER_NAME
    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
