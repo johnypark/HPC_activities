@@ -1,6 +1,6 @@
 #Submitting jobs on Linux bash system 
 
-1.Example of a code
+A.Example of a code
 ```sh
 #!/bin/bash
 #SBATCH --job-name=prime_threaded   #Job name   
@@ -19,21 +19,21 @@ module load python
 python GetZonalStats.py
                          
 ```
-2. Submitting a job to the cluster 
+B. Submitting a job to the cluster 
 
 ```bash 
 $sbatch Runcode.sh 
    Submitted batch job 3844451
 ```
 
-3. Checking the submitted job 
+C. Checking the submitted job 
 ```bash
 $squeue -u $USER_NAME
    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
    3844451 hpg2-comp prime_th   g2njoy PD       0:00      1 (Priority)
 ```
 
-4. Email that was received 
+D. Email that was received 
 ```bash
 Job ID: 3844451
 Cluster: hipergator
