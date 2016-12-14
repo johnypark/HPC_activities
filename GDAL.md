@@ -122,6 +122,72 @@ $ grep -E -n 'Upper | Lower | Left | Right' info.txt
 36:Lower Left  (  626140.021, 1012125.047) ( 79d51' 7.05"W,  9d 9'15.89"N)
 37:Upper Right (  626343.241, 1012294.937) ( 79d51' 0.37"W,  9d 9'21.40"N)
 38:Lower Right (  626343.241, 1012125.047) ( 79d51' 0.39"W,  9d 9'15.87"N)
+```
+
+```bash
+
+#!/bin/bash
+##PBS -N fn
+##PBS -o fn.out
+##PBS -e fn.err
+#PBS -j oe
+#PBS -m abe
+#PBS -l walltime=00:05:00
+#PBS -l nodes=1:ppn=1:infiniband
+#PBS -M g2njoy@ufl.edu
+echo jobname: $PBS_JOBNAME
+
+#Record the time and compute node the job ran on
+
+DR_file="/home/g2njoy/BCI_analysis/EEE6512_Final_Project/data/"  # outpout dir
+module load intel
+module load netcdf
+module load nco
+module load otb
+module load gcc
+module load gdal
+
+gdalwarp -te 626343.241 1012125.047 626140.021 1012294.937 20150415_PIF_7cm_ORTHO_R_clip.tif 2015_0415_clipped_7cm.tif
+
+```
+
+```bash
+
+#!/bin/bash
+##PBS -N fn
+##PBS -o fn.out
+##PBS -e fn.err
+#PBS -j oe
+#PBS -m abe
+#PBS -l walltime=00:05:00
+#PBS -l nodes=1:ppn=1:infiniband
+#PBS -M g2njoy@ufl.edu
+echo jobname: $PBS_JOBNAME
+
+#Record the time and compute node the job ran on
+
+DR_file="/home/g2njoy/BCI_analysis/EEE6512_Final_Project/data/"  # outpout dir
+module load intel
+module load netcdf
+module load nco
+module load otb
+module load gcc
+module load gdal
+CHN=1
+xradius=2;
+yradius=2;
+
+cd $DR_file
+date; hostname; pwd
+launch_otb otbcli_HaralickTextureExtraction -in bci0415_gray_16.tif -channel $CHN -parameters.xrad $xradius -parameters.yrad $yradius -texture simple -out 20150415_simple.tif
+
+xradius=5;
+yradius=5;
+
+launch_otb otbcli_HaralickTextureExtraction -in bci0415_gray_16.tif -channel $CHN -parameters.xrad $xradius -parameters.yrad $yradius -texture advanced -out 20150415_advanced.tif
+                      
+
+```
 
 
 
