@@ -1,4 +1,4 @@
-# GDAL usage in bash 
+##  GDAL usage in bash 
 
 This document is to help using resources of University Florida hypergator cluster:
 
