@@ -19,6 +19,11 @@ module load python
 python GetZonalStats.py
                          
 ```
+
+Number of cores that are used in this job: 4 
+Memory allocated per cpu: 2G
+Maximum memory requested: 8G 
+
 B. Submitting a job to the cluster 
 
 ```bash 
@@ -50,3 +55,10 @@ Memory Efficiency: 0.02% of 8.00 GB
 E. More info 
 
 http://lunarc-documentation.readthedocs.io/en/latest/batch_system/
+
+F. Question
+
+How many nodes can one job use?
+How many cores per node can be requested?
+How much memory per cores can be requested?
+
