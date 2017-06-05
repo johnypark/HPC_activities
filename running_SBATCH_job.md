@@ -38,7 +38,7 @@ $squeue -u $USER_NAME
    3844451 hpg2-comp prime_th   g2njoy PD       0:00      1 (Priority)
 ```
 
-### D. Email that was received 
+### D. Receiving Email
 ```bash
 Job ID: 3844451
 Cluster: hipergator
