@@ -123,7 +123,7 @@ $ grep -E -n 'Upper | Lower | Left | Right' info.txt
 37:Upper Right (  626343.241, 1012294.937) ( 79d51' 0.37"W,  9d 9'21.40"N)
 38:Lower Right (  626343.241, 1012125.047) ( 79d51' 0.39"W,  9d 9'15.87"N)
 ```
-## 6. Usage of gdalwarp to clip bigger raster images to smaller ones, sh file including sumbitting format 
+## 6. Example of sh file for submitting job (gdalwarp to clip raster) to cluster   
 ```bash
 
 #!/bin/bash
