@@ -58,7 +58,7 @@ scontrol show job <jobID>
 
 ```
 
-### Example of command scontrol outcome 
+Example of scontrol outcome 
 
 ```bash
 
@@ -86,6 +86,12 @@ UserId=USER_NAME(USER_#) GroupId=GROUP_NAME(GROUP_#)
    StdIn=/dev/null
    StdOut=DIRECTORY_WORK/OUT_FILE.out
    Power= SICP=0
+```
+### F. Canceling a job 
+
+```bash 
+scancel <jobID>
+
 ```
 
 
