@@ -4,12 +4,12 @@ This document is to help using resources of University Florida hypergator cluste
 
 ____________________________________________________________________________________________
 Using GDAL software:
-# 1. Loading software
+## 1. Loading software
 ```bash
 $module load gcc
 $module load gdal
 ```
-# 2. See the available library:
+## 2. See the available library:
 ```bash
 $ ls $HPC_LIBGDAL_BIN
 gdaladdo      gdal-config   gdaldem      gdal_grid  gdallocationinfo 
@@ -19,7 +19,7 @@ gdalbuildvrt  gdal_contour  gdalenhance  gdalinfo   gdalmanage
 gdalserver      gdaltindex   gdal_translate  nearblack  ogrinfo  ogrtindex
 ```
 More information about the libraries @: http://www.gdal.org/pages.html
-# 3. clipping raster file: 
+## 3. clipping raster file: 
 http://www.gdal.org/gdalwarp.html
 
 ```bash
@@ -35,7 +35,7 @@ $gdalwarp -te 626140.100 1012125.000 626140.200 1012125.200 20150415_RGBNorm_Sub
 ```
 
 
-# 4. Example of using gdalinfo:
+## 4. Example of using gdalinfo:
 
 ```bash
 $gdalinfo clipped_output.tif 
@@ -84,7 +84,7 @@ Band 2 Block=1x3 Type=Byte, ColorInterp=Green
 Band 3 Block=1x3 Type=Byte, ColorInterp=Blue
   NoData Value=nan
 ```
-#5. Usage of Grep -E: Getting boundaries of the raster layer
+##5. Usage of Grep -E: Getting boundaries of the raster layer
    
    -E, --extended-regexp
           Interpret PATTERN as an extended regular expression (ERE, see below).  (-E is specified by POSIX.)
