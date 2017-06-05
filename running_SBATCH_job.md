@@ -96,11 +96,11 @@ scancel <jobID>
 
 
 
-### E. More info 
+### G. More info 
 
 http://lunarc-documentation.readthedocs.io/en/latest/batch_system/
 
-### F. Question
+### H. Question
 
 How many nodes can one job use?
 How many cores per node can be requested?
