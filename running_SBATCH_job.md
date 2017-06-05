@@ -1,6 +1,6 @@
-#Submitting jobs on Linux bash system 
+## Submitting jobs on Linux bash system 
 
-A.Example of a code
+### A. Example of a code
 ```sh
 #!/bin/bash
 #SBATCH --job-name=prime_threaded   #Job name   
@@ -24,21 +24,21 @@ Number of cores that are used in this job: 4
 Memory allocated per cpu: 2G
 Maximum memory requested: 8G 
 
-B. Submitting a job to the cluster 
+### B. Submitting a job to the cluster 
 
 ```bash 
 $sbatch Runcode.sh 
    Submitted batch job 3844451
 ```
 
-C. Checking the submitted job 
+### C. Checking the submitted job 
 ```bash
 $squeue -u $USER_NAME
    JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
    3844451 hpg2-comp prime_th   g2njoy PD       0:00      1 (Priority)
 ```
 
-D. Email that was received 
+### D. Email that was received 
 ```bash
 Job ID: 3844451
 Cluster: hipergator
@@ -52,11 +52,11 @@ Memory Utilization 1.31 MB
 Memory Efficiency: 0.02% of 8.00 GB
 
 ```
-E. More info 
+### E. More info 
 
 http://lunarc-documentation.readthedocs.io/en/latest/batch_system/
 
-F. Question
+### F. Question
 
 How many nodes can one job use?
 How many cores per node can be requested?
