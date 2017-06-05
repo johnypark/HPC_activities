@@ -1,5 +1,7 @@
 #Copying files from local directory to HPC account directory
+
 #Open terminal in local computer 
+
 A. copying using rsync
 ```sh
 
