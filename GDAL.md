@@ -98,24 +98,22 @@ Matching Control
 ```bash
 
 $ ls
-20150415_RGBNorm_Subset.tif			  BCI__Crown_Data_subset.qpj
-20150415_WaterShedBlueLineSeg_Subset.tif	  BCI__Crown_Data_subset.shp
-20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  BCI__Crown_Data_subset.shx
+20150415_RGBNorm_Subset.tif			 
+20150415_WaterShedBlueLineSeg_Subset.tif	  
+20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  
 20150415_YCbCr_Subset.tif			  info.txt
 20150415_YCbCr_Subset.tif.aux.xml		  RGBHaralikcTexturesCH2.tif
-BCI__Crown_Data_subset.dbf			  RGBHaralikcTextures.tif
-BCI__Crown_Data_subset.prj
+
 
 $ gdalinfo 20150415_WaterShedBlueLineSeg_Subset.tif >>info.txt
 
 $ ls
-20150415_RGBNorm_Subset.tif			  BCI__Crown_Data_subset.qpj
-20150415_WaterShedBlueLineSeg_Subset.tif	  BCI__Crown_Data_subset.shp
-20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  BCI__Crown_Data_subset.shx
+20150415_RGBNorm_Subset.tif			  
+20150415_WaterShedBlueLineSeg_Subset.tif	  
+20150415_WaterShedBlueLineSeg_Subset.tif.aux.xml  
 20150415_YCbCr_Subset.tif			  info.txt
 20150415_YCbCr_Subset.tif.aux.xml		  RGBHaralikcTexturesCH2.tif
-BCI__Crown_Data_subset.dbf			  RGBHaralikcTextures.tif
-BCI__Crown_Data_subset.prj
+
 
 $ grep -E -n 'Upper | Lower | Left | Right' info.txt
 35:Upper Left  (  626140.021, 1012294.937) ( 79d51' 7.03"W,  9d 9'21.43"N)
@@ -129,7 +127,7 @@ $ grep -E -n 'Upper | Lower | Left | Right' info.txt
 #!/bin/bash
 #SBATCH --job-name=Zonal_Stats   #Job name   
 #SBATCH --mail-type=ALL   # Mail events (NONE, BEGIN, END, FAIL, ALL)
-#SBATCH --mail-user=g2njoy@ufl.edu   # Where to send mail       
+#SBATCH --mail-user=EMAIL_ADDRESS@DOMAIN.MAIL   # Where to send mail       
 #SBATCH --cpus-per-task=4   # Number of cores for multi-threaded ojbs
 #SBATCH --mem-per-cpu=2gb   # Per processor memory
 #SBATCH -t 00:05:00   # Walltime
@@ -139,7 +137,7 @@ $ grep -E -n 'Upper | Lower | Left | Right' info.txt
 
 
 
-DR_file="/home/g2njoy/BCI_analysis/EEE6512_Final_Project/data/"  # outpout dir
+DR_file="DIRECTORY/"  # outpout dir
 module load intel
 module load netcdf
 module load nco
@@ -161,12 +159,12 @@ gdalwarp -te 626343.241 1012125.047 626140.021 1012294.937 20150415_PIF_7cm_ORTH
 #PBS -m abe
 #PBS -l walltime=00:05:00
 #PBS -l nodes=1:ppn=1:infiniband
-#PBS -M g2njoy@ufl.edu
+#PBS -M EMAIL_ADDRESS@DOMAIN.MAIL
 echo jobname: $PBS_JOBNAME
 
 #Record the time and compute node the job ran on
 
-DR_file="/home/g2njoy/BCI_analysis/EEE6512_Final_Project/data/"  # outpout dir
+DR_file="/DIRECTORY/"  # outpout dir
 module load intel
 module load netcdf
 module load nco
