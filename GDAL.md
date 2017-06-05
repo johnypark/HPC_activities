@@ -127,17 +127,17 @@ $ grep -E -n 'Upper | Lower | Left | Right' info.txt
 ```bash
 
 #!/bin/bash
-##PBS -N fn
-##PBS -o fn.out
-##PBS -e fn.err
-#PBS -j oe
-#PBS -m abe
-#PBS -l walltime=00:05:00
-#PBS -l nodes=1:ppn=1:infiniband
-#PBS -M g2njoy@ufl.edu
-echo jobname: $PBS_JOBNAME
+#SBATCH --job-name=Zonal_Stats   #Job name   
+#SBATCH --mail-type=ALL   # Mail events (NONE, BEGIN, END, FAIL, ALL)
+#SBATCH --mail-user=g2njoy@ufl.edu   # Where to send mail       
+#SBATCH --cpus-per-task=4   # Number of cores for multi-threaded ojbs
+#SBATCH --mem-per-cpu=2gb   # Per processor memory
+#SBATCH -t 00:05:00   # Walltime
+#SBATCH -o prime_threaded.%j.out   # Name output file 
 
 #Record the time and compute node the job ran on
+
+
 
 DR_file="/home/g2njoy/BCI_analysis/EEE6512_Final_Project/data/"  # outpout dir
 module load intel
