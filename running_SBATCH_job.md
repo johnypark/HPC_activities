@@ -106,3 +106,4 @@ How many nodes can one job use?
 How many cores per node can be requested?
 How much memory per cores can be requested?
 
+(Sent email to Tao regarding with it, 6/5/17)
